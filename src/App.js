@@ -8,6 +8,8 @@ function App() {
   const [users, setUsers] = useState([]);
 
   const addNewUserHandler = usersData => {
+    usersData.id = users.length + 1;
+
     setUsers((prevState) => {
       return [usersData, ...prevState];
     });
